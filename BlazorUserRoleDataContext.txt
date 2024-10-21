@@ -1,0 +1,35 @@
+  using Microsoft.EntityFrameworkCore;
+//using BlazorCRUDSsr.Models;
+
+using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
+namespace BlazorCRUDSsr.Data
+    {
+
+        public class DataContext(DbContextOptions<DataContext> options):
+        IdentityDbContext<IdentityUser>(options)
+            {
+            }
+            //protected override void OnModelCreating(ModelBuilder modelBuilder)
+            //{
+            //    base.OnModelCreating(modelBuilder);
+
+            //    modelBuilder.Entity<Employee>()
+            //        .HasKey(e => e.EmpId); // Define primary key
+
+            //    modelBuilder.Entity<Employee>()
+            //        .HasOne(e => e.Department) // Employee belongs to one Department
+            //        .WithMany(d => d.Employees) // Department can have many Employees
+            //        .HasForeignKey(e => e.DeptId) // Define foreign key
+            //        .OnDelete(DeleteBehavior.Cascade); // Optional: Cascade delete behavior
+            //}
+
+            //public DbSet<Employee> Employees { get; set; }
+            //public DbSet<Department> Departments { get; set; }
+        }
+   
+
+
+
